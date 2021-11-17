@@ -1,4 +1,6 @@
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { createTheme } from '@material-ui/core/styles'
 import {Typography} from '@material-ui/core'; 
 import Button from '@material-ui/core/Button';
 import NavBar from './components/NavBar'
@@ -6,11 +8,13 @@ import NavBar from './components/NavBar'
 import Grid from './components/Grid'
 import Footer from './components/Footer'
 import './App.css';
+import Home from './pages/Home';
+import PuzzleDay from './pages/puzzleoftheDay';
 //changes to imports 
 // template for if we want to end up using any of the material ui icons vvv
 // import TestIcon from '@material-ui/icons/Test';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main:"#2e1667",
@@ -59,18 +63,14 @@ function App() {
   const classes = styles(); 
 
   return (
+    <Router>
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar/>
-        <div className={classes.wrapper}>
-          <Typography variant="h4" className={classes.bigSpace} color="primary">
-             At Chessmate, we believe that the best way to learn is to play.
-          </Typography>
-        <div className={classes.littleSpace}>
-          <Button variant="contained"link={`${process.env.API}/auth/login`}>Login with Lichess</Button>
-        </div>
-        <iframe src="https://lichess.org/tv/frame?theme=blue&bg=dark" style={{width: 400, height: 444, allowtransparency:"true", frameborder:"0"}} title="LichessTV"></iframe>
-        </div>
+        <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
+        </Routes>
         {/* demo of what we can use for icons if we want for the grid */}
         {/* <div className={`${classes.grid} ${classes.bigSpace}`}>
           <Grid icon={<SecurityIcon style={{fill: "#4360A6", height:"125", width:"125"}}/>}  title="Secure" btnTitle="Show me More" />
@@ -87,6 +87,7 @@ function App() {
         </div>
       </ThemeProvider>
   </div>
+  </Router>
   )};
 
 export default App;
