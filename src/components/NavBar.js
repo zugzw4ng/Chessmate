@@ -49,7 +49,11 @@ function NavBar() {
                 <Typography variant="h6" className={classes.menuItem}>
                     Matches 
                 </Typography>
-                <CustomBtn txt="Login"/>
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link to="resources">
+                    Chess Resources
+                </Link>
+                </Typography>
             </Toolbar>
     )
 }
