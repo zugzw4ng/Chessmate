@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
+import ParticleBackground from './ParticleBackground';
 //changes to imports 
 // template for if we want to end up using any of the material ui icons vvv
 // import TestIcon from '@material-ui/icons/Test';
@@ -60,6 +61,11 @@ const styles = makeStyles({
 })
 
 function App() {
+
+  <div>
+    <ParticleBackground />
+  </div>
+
   const classes = styles(); 
 
   return (
