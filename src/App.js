@@ -1,5 +1,6 @@
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import {Typography} from '@material-ui/core'; 
+import Button from '@material-ui/core/Button';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
 import Grid from './components/Grid'
@@ -65,7 +66,10 @@ function App() {
           <Typography variant="h4" className={classes.bigSpace} color="primary">
              At Chessmate, we believe that the best way to learn is to play.
           </Typography>
-          <iframe src="https://lichess.org/tv/frame?theme=blue&bg=dark" style={{width: 400, height: 444, allowtransparency:"true", frameborder:"0"}} title="LichessTV"></iframe>
+        <div className={classes.littleSpace}>
+          <Button variant="contained"link={`${process.env.API}/auth/login`}>Login with Lichess</Button>
+        </div>
+        <iframe src="https://lichess.org/tv/frame?theme=blue&bg=dark" style={{width: 400, height: 444, allowtransparency:"true", frameborder:"0"}} title="LichessTV"></iframe>
         </div>
         {/* demo of what we can use for icons if we want for the grid */}
         {/* <div className={`${classes.grid} ${classes.bigSpace}`}>
