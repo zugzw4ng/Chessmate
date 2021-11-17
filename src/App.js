@@ -1,11 +1,11 @@
-import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme } from '@material-ui/core/styles'
 import {Typography} from '@material-ui/core'; 
 import Button from '@material-ui/core/Button';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
-import Grid from './components/Grid'
+// import Grid from './components/Grid'
 import Footer from './components/Footer'
 import './App.css';
 import Home from './pages/Home';
@@ -72,16 +72,7 @@ function App() {
         <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
         </Routes>
         {/* demo of what we can use for icons if we want for the grid */}
-        {/* <div className={`${classes.grid} ${classes.bigSpace}`}>
-          <Grid icon={<SecurityIcon style={{fill: "#4360A6", height:"125", width:"125"}}/>}  title="Secure" btnTitle="Show me More" />
-          <Grid icon={<EventNoteIcon style={{fill: "#449A76", height:"125", width:"125"}}/>} title="Reliable" btnTitle="Show me More"/>
-          <Grid icon={<TrendingUpIcon style={{fill: "#D05B2D", height:"125", width:"125"}}/>}  title="Performant" btnTitle="Show me More"/>
-        </div>
-        <div className={`${classes.grid} ${classes.littleSpace}`}>  
-          <Grid icon={<ImportExportIcon style={{fill: "#5EA780", height:"125", width:"125"}}/>}  title="Modular" btnTitle="Show me More"/>
-          <Grid icon={<ComputerIcon style={{fill: "#E69426", height:"125", width:"125"}}/>}  title="Multi-Platform" btnTitle="Show me More"/>
-          <Grid icon={<HttpIcon style={{fill: "#2EA09D", height:"125", width:"125"}}/>} title="Connected" btnTitle="Show me More"/>
-        </div> */}
+        {/* can add more divs here */}
         <div className={classes.bigSpace}>
           <Footer/>
         </div>
