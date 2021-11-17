@@ -1,6 +1,6 @@
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { createTheme } from '@material-ui/core/styles'
+import { createMuiTheme } from '@material-ui/core/styles';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
 import Grid from './components/Grid'
@@ -13,7 +13,7 @@ import Resources from './pages/Resources';
 // template for if we want to end up using any of the material ui icons vvv
 // import TestIcon from '@material-ui/icons/Test';
 
-const theme = createTheme({
+const theme = createMuiTheme({
   palette: {
     primary: {
       main:"#2e1667",
