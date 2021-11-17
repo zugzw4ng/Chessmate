@@ -42,6 +42,12 @@ function NavBar() {
             <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
                 {/* can place image url here for our logo for chessmate which will use svg formatting to fill according to mobile or web*/}
                 <Typography variant="h6" className={classes.menuItem}>
+                <Link to="/">
+                    Home
+                </Link>
+                </Typography>
+                <Typography variant="h6" className={classes.menuItem}>
+
                 <Link to="puzzleoftheday">
                     Puzzle of The Day
                 </Link>
@@ -49,7 +55,11 @@ function NavBar() {
                 <Typography variant="h6" className={classes.menuItem}>
                     Matches 
                 </Typography>
-                <CustomBtn txt="Login"/>
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link to="resources">
+                    Chess Resources
+                </Link>
+                </Typography>
             </Toolbar>
     )
 }
