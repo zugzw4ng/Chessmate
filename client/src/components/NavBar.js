@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomBtn from './CustomBtn'
+import CustomBtn from '../src/CustomBtn'
 import {Toolbar, Typography} from '@material-ui/core'
 import {makeStyles} from "@material-ui/core/styles"; 
 
