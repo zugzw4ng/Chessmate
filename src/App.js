@@ -1,6 +1,7 @@
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import {Typography} from '@material-ui/core'; 
 import NavBar from './components/NavBar'
+// eslint-disable-next-line no-unused-vars
 import Grid from './components/Grid'
 import Footer from './components/Footer'
 import './App.css';
@@ -81,8 +82,7 @@ function App() {
           <Footer/>
         </div>
       </ThemeProvider>
-    </div>
-  );
-}
+  </div>
+  )};
 
 export default App;
