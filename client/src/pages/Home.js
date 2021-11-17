@@ -3,8 +3,8 @@ import {Typography} from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { createTheme } from '@material-ui/core/styles'
 
 const theme = createTheme({
   palette: {

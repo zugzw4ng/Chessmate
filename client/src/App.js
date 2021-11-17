@@ -1,6 +1,6 @@
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { createTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
 // import Grid from './components/Grid'
