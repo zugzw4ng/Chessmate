@@ -7,10 +7,16 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "apollo-server-express": "^3.5.0",
     "crypto": "^1.0.1",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "mongoose": "^6.0.13",
     "node-fetch": "^2.6.6",
+    "passport": "^0.5.0",
     "passport-lichess": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
