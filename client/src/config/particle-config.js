@@ -1,7 +1,7 @@
 const particlesConfig = {
     particles: {
       number: {
-        value: 600,
+        value: 400,
         density: {
           enable: false,
           value_area: 1000
@@ -62,8 +62,8 @@ const particlesConfig = {
         bounce: false,
         attract: {
           enable: true,
-          rotateX: 500,
-          rotateY: 500
+          rotateX: 600,
+          rotateY: 600
         }
       }
     },

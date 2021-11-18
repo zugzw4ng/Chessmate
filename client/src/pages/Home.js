@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { createTheme } from '@material-ui/core/styles';
+import ParticleBackground from '../ParticleBackground';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const theme = createTheme({
@@ -58,6 +59,7 @@ const  Home = () => {
 
     return (
       <div>
+        <ParticleBackground />
       <ThemeProvider theme={theme}>
         <div className={classes.wrapper}>
           <Typography variant="h4" className={classes.bigSpace} color="primary">
@@ -66,7 +68,7 @@ const  Home = () => {
         <div className={classes.littleSpace}>
           <Button variant="contained"link={`${process.env.API}/auth/login`}>Login with Lichess</Button>
         </div>
-        <iframe src="https://lichess.org/tv/frame?theme=blue&bg=dark" style={{width: 400, height: 444, allowtransparency:"true", frameborder:"0"}} title="LichessTV"></iframe>
+        <iframe src="https://lichess.org/tv/frame?theme=metal&pieceSet=fantasy&bg=dark" style={{width: 400, height: 444, allowtransparency:"true", frameborder:"0"}} title="LichessTV"></iframe>
         </div>
         </ThemeProvider>
       </div>
