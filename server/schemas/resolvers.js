@@ -1,4 +1,4 @@
-const {User} = require('../models')
+const {User, Puzzle} = require('../models')
 const {AuthenticationError} = require('apollo-server-express');
 const {signToken} = require('../utils/auth');
 
@@ -11,6 +11,13 @@ const resolvers={
                 return userData;
             }
             throw new AuthenticationError('Not Logged In');
+        },
+
+        puzzle: async(parent, { PuzzleId }) => {
+            return await Puzzle.findOne({ PuzzleId });
+        },
+        puzzles: async() => {
+            return await Puzzle.find({});
         }
     },
     Mutation:{
