@@ -1,6 +1,8 @@
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { createTheme } from '@material-ui/core/styles';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
 import './App.css';
@@ -56,11 +58,27 @@ const styles = makeStyles({
   },
 })
 
+
+
+const client = new ApolloClient({
+  request: operation =>{
+    const token = localStorage.getItem('id_token');
+    operation.setContext({
+      headers:{
+        authorization: token ? `Bearer ${token}`  : ''
+      }
+    });
+  },
+  uri:'/graphql'
+});
+
+
 function App() {
 
   const classes = styles(); 
 
   return (
+    <ApolloProvider client={client}>
     <Router>
     <div className="App">
     <ParticleBackground />
@@ -80,6 +98,7 @@ function App() {
       </ThemeProvider>
   </div>
   </Router>
+  </ApolloProvider>
   )};
 
 export default App;
