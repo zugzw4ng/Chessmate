@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom';
 import {Toolbar, Typography} from '@material-ui/core'
 import {makeStyles} from "@material-ui/core/styles"; 
+import LoginForm from './LoginForm';
 
 const styles = makeStyles({
     bar:{
@@ -57,6 +58,11 @@ function NavBar() {
                 <Typography variant="h6" className={classes.menuItem}>
                 <Link to="resources">
                     Chess Resources
+                </Link>
+                </Typography>
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link to="login">
+                    Login
                 </Link>
                 </Typography>
             </Toolbar>

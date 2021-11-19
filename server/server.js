@@ -1,32 +1,42 @@
 const express = require('express');
-const session = require('express-session');
-const passport = require('passport');
-const LichessStrategy = require('./lib').Strategy;
+const path = require('path');
+// import ApolloServer
+const { ApolloServer } = require('apollo-server-express');
 
-passport.use(new LichessStrategy({
-  clientID: 'example.com',
-  callbackURL: 'http://localhost:5000/auth/lichess/callback'
-}, (_accessToken, _refreshToken, profile, cb) => cb(null, profile)));
+// import our typeDefs and resolvers
+const { typeDefs, resolvers } = require('./schemas');
+const db = require('./config/connection');
 
-passport.serializeUser((user, cb) => cb(null, user));
-passport.deserializeUser((obj, cb) => cb(null, obj));
+const {authMiddleware} = require('./utils/auth');
 
+const PORT = process.env.PORT || 3001;
 const app = express();
+// create a new Apollo server and pass in our schema data
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context:authMiddleware
+});
 
-app.use(session({secret:'some-secret', resave: true, saveUninitialized: true}));
-app.use(passport.initialize());
-app.use(passport.session());
+// integrate our Apollo server with the Express application as middleware
+server.applyMiddleware({ app });
 
-app.get('/auth/lichess', passport.authenticate('lichess'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-app.get('/auth/lichess/callback',
-  passport.authenticate('lichess', {
-    successRedirect: '/ok',
-    failureRedirect: '/nope'
-  }));
+// Serve up static assets
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
-app.get('/', (_req, res) => res.send('<a href="http://localhost:5000/auth/lichess">Login</a>'));
-app.get('/ok', (req, res) => res.send(`Hello ${req.user.username}!`));
-app.get('/nope', (_req, res) => res.send('Authentication failed'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
-app.listen(5000, () => console.log('http://localhost:5000/'));
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+    // log where we can go to test our GQL API
+    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+  });
+});

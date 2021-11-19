@@ -53,7 +53,19 @@ const styles = makeStyles({
 
 const  Home = () => {
 
+
+
     const classes = styles(); 
+
+
+
+    const getLogin = () => {fetch("http://localhost:5000/ok")
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
+    }
+
+      useEffect(() => { getLogin() })
 
     return (
       <div>
@@ -63,7 +75,7 @@ const  Home = () => {
              At Chessmate, we believe that the best way to learn is to play.
           </Typography>
         <div className={classes.littleSpace}>
-          <Button variant="contained"link={`${process.env.API}/auth/login`}>Login with Lichess</Button>
+          <a href= "http://localhost:5000/auth/lichess">Login</a>
         </div>
         <iframe src="https://lichess.org/tv/frame?theme=blue&bg=dark" style={{width: 400, height: 444, allowtransparency:"true", frameborder:"0"}} title="LichessTV"></iframe>
         </div>
