@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {Toolbar, Typography} from '@material-ui/core'
+import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import {makeStyles} from "@material-ui/core/styles"; 
 import LoginForm from './LoginForm';
+import SignUpForm from './SignupForm';
 
 const styles = makeStyles({
     bar:{
@@ -38,6 +40,7 @@ const styles = makeStyles({
 
 function NavBar() {
     const classes = styles()
+    const [showModal, setShowModal] = useState(false);
     return (
             <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
                 {/* can place image url here for our logo for chessmate which will use svg formatting to fill according to mobile or web*/}
@@ -60,12 +63,40 @@ function NavBar() {
                     Chess Resources
                 </Link>
                 </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link to="login">
-                    Login
-                </Link>
-                </Typography>
+                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                <Modal
+        size='lg'
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        aria-labelledby='signup-modal'>
+        {/* tab container to do either signup or login component */}
+        <Tab.Container defaultActiveKey='login'>
+          <Modal.Header closeButton>
+            <Modal.Title id='signup-modal'>
+              <Nav variant='pills'>
+                <Nav.Item>
+                  <Nav.Link eventKey='login'>Login</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Tab.Content>
+              <Tab.Pane eventKey='login'>
+                <LoginForm handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+              <Tab.Pane eventKey='signup'>
+                <SignUpForm handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+            </Tab.Content>
+          </Modal.Body>
+        </Tab.Container>
+      </Modal>
             </Toolbar>
+
     )
 }
 
