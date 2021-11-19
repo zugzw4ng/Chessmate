@@ -58,7 +58,9 @@ function NavBar() {
                 </Link>
                 </Typography>
                 <Typography variant="h6" className={classes.menuItem}>
-                    Matches 
+                <Link to="puzzleboard">
+                    Puzzle Training
+                </Link>
                 </Typography>
                 <Typography variant="h6" className={classes.menuItem}>
                 <Link to="resources">
