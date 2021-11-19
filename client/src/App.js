@@ -8,7 +8,7 @@ import NavBar from './components/NavBar'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
-import ParticleBackground from './ParticleBackground';
+// import ParticleBackground from './ParticleBackground';
 import Resources from './pages/Resources';
 
 
@@ -81,7 +81,7 @@ function App() {
     <ApolloProvider client={client}>
     <Router>
     <div className="App">
-    <ParticleBackground />
+    {/* <ParticleBackground /> */}
       <ThemeProvider theme={theme}>
         <NavBar/>
         <Routes>
