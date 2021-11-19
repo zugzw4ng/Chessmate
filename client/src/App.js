@@ -8,8 +8,11 @@ import NavBar from './components/NavBar'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
-// import ParticleBackground from './ParticleBackground';
 import Resources from './pages/Resources';
+
+// particles
+import Particles from 'react-tsparticles';
+import particlesConfig from './config/configParticles';
 
 
 const theme = createTheme({
@@ -80,8 +83,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <Router>
-    <div className="App">
-    {/* <ParticleBackground /> */}
+    <div className="App" style={{ position: 'relative', overflow: "hidden" }}>
+    <div style={{ position: 'absolute'}}>
+      <Particles height="100vh" width="100vw" params={particlesConfig} />
+    </div>
       <ThemeProvider theme={theme}>
         <NavBar/>
         <Routes>
