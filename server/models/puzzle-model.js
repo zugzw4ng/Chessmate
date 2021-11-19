@@ -1,8 +1,6 @@
-import mongoose from 'mongoose';
+const { Schema, model } = require('mongoose');
 
-const {Schema} = mongoose;
-
-const puzzleDefinition = new Schema({
+const PuzzleSchema = new Schema({
 	PuzzleId: {type: String},
 	FEN: {type: String},
 	Moves: {type: String},
@@ -14,7 +12,6 @@ const puzzleDefinition = new Schema({
 	GameUrl: {type: String},
 });
 
-const PuzzleSchema = new mongoose.Schema(puzzleDefinition);
-const Puzzle = mongoose.model('Puzzle', PuzzleSchema);
+const Puzzle = model('Puzzle', PuzzleSchema);
 
-export { Puzzle };
+module.exports = Puzzle;

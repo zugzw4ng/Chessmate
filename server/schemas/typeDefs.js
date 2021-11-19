@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-const { gql } = require('apollo-server-express');
-
-const typeDefs = gql`
-type Puzzle {
-    _id: ID
-    puzzleId: String
-    FEN: String
-    Moves: String
-    Rating: Number
-    RatingDeviation: Number
-	Popularity: Number
-	NbPlays: Number
-	Themes: String
-	GameUrl: String
-}
-` 
-=======
 // import the gql tagged template function
 const {gql} =require('apollo-server-express');
 
@@ -31,16 +13,30 @@ const typeDefs = gql`
         user: User
     }
 
+    type Puzzle{
+        PuzzleId: String
+        FEN: String
+        Moves: String
+        Rating: Int
+        RatingDeviation: Int
+        Popularity: Int
+        NbPlays: Int
+        Themes: String
+        GameUrl: String
+    }
+
     type Query{
         me: User
         users: [User]
+        puzzle(PuzzleId: ID!): Puzzle
+        puzzles: [Puzzle]
     }
 
     type Mutation{
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
     }
+
 `;
 
 module.exports = typeDefs;
->>>>>>> a82bb98071588b80878a765797ad17551268c01a

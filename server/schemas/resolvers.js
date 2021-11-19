@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-const { Puzzle } = require('../models');
-// TODO: Review all of this after typeDefs are completed
-const resolvers = {
-    Query: {
-        puzzles: async () => {
-            return Puzzle.find();
-        },
-
-        puzzle: async (parent, { puzzleId }) => {
-            return Puzzle.findOne({ _id: puzzleId });
-        },
-    },
-
-		Mutation: {
-			addPuzzle: async (parent, { puzzleId }) => {
-				return Puzzle.create({ puzzleId });
-			},
-
-		}
-}
-=======
-const {User} = require('../models')
+const {User, Puzzle} = require('../models')
 const {AuthenticationError} = require('apollo-server-express');
 const {signToken} = require('../utils/auth');
 
@@ -33,6 +11,13 @@ const resolvers={
                 return userData;
             }
             throw new AuthenticationError('Not Logged In');
+        },
+
+        puzzle: async(parent, { PuzzleId }) => {
+            return await Puzzle.findOne({ PuzzleId });
+        },
+        puzzles: async() => {
+            return await Puzzle.find({});
         }
     },
     Mutation:{
@@ -58,4 +43,3 @@ const resolvers={
 };
 
 module.exports = resolvers;
->>>>>>> a82bb98071588b80878a765797ad17551268c01a
