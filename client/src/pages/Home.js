@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { createTheme } from '@material-ui/core/styles';
-import ParticleBackground from '../ParticleBackground';
+// import ParticleBackground from '../ParticleBackground';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const theme = createTheme({
@@ -59,7 +59,7 @@ const  Home = () => {
 
     return (
       <div>
-        <ParticleBackground />
+        {/* <ParticleBackground /> */}
       <ThemeProvider theme={theme}>
         <div className={classes.wrapper}>
           <Typography variant="h4" className={classes.bigSpace} color="primary">

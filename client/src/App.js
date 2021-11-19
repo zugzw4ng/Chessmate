@@ -14,6 +14,7 @@ import Resources from './pages/Resources';
 // template for if we want to end up using any of the material ui icons vvv
 // import TestIcon from '@material-ui/icons/Test';
 
+
 const theme = createTheme({
   palette: {
     primary: {
