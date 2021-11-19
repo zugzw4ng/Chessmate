@@ -3,25 +3,21 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { createTheme } from '@material-ui/core/styles';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
-// import Grid from './components/Grid'
-import Footer from './components/Footer'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
 import ParticleBackground from './ParticleBackground';
 import Resources from './pages/Resources';
-//changes to imports 
-// template for if we want to end up using any of the material ui icons vvv
-// import TestIcon from '@material-ui/icons/Test';
 
 
 const theme = createTheme({
   palette: {
+    type: 'dark',
     primary: {
-      main:"#2e1667",
+      main: '#3f51b5',
     },
     secondary: {
-      main:"#c7d8ed",
+      main: '#f50057',
     },
   },
   typography: {
@@ -79,7 +75,7 @@ function App() {
         {/* demo of what we can use for icons if we want for the grid */}
         {/* can add more divs here */}
         <div className={classes.bigSpace}>
-          <Footer/>
+          
         </div>
       </ThemeProvider>
   </div>

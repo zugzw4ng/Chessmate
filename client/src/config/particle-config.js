@@ -30,7 +30,7 @@ const particlesConfig = {
         random: false,
         anim: {
           enable: true,
-          speed: 0.23976023976023975,
+          speed: 0.1,
           opacity_min: 0,
           sync: false
         }
