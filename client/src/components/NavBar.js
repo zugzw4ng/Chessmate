@@ -6,6 +6,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm';
 
+import Auth from '../utils/auth';
+
 const styles = makeStyles({
     bar:{
         paddingTop: "1.15rem",
@@ -63,7 +65,14 @@ function NavBar() {
                     Chess Resources
                 </Link>
                 </Typography>
+              {/* if user is logged in show saved books and logout */}
+              {Auth.loggedIn() ? (
+                <>
+                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                </>
+              ) : (
                 <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+              )}
                 <Modal
         size='lg'
         show={showModal}
