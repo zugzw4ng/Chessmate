@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Chess from "../utils/chess"
 import Chessground from "react-chessground"
 import "react-chessground/dist/styles/chessground.css"
+import { Col, Modal } from "antd"
 
 const PuzzleBoard = () => {
   const [chess, setChess] = useState(new Chess())
@@ -65,6 +66,8 @@ const PuzzleBoard = () => {
 
   return (
     <div style={{ background: "#2b313c", height: "100vh" }}>
+      <Col span={6} />
+      <Col span={12} style={{ top: "10%" }}>
         <Chessground
           width="38vw"
           height="38vw"
@@ -75,6 +78,9 @@ const PuzzleBoard = () => {
           onMove={onMove}
           style={{ margin: "auto" }}
         />
+      </Col>
+      <Col span={6} />
+      
     </div>
   )
 }
