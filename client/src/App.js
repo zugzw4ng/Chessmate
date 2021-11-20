@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
+import MyPuzzles from './pages/mypuzzles';
 import Resources from './pages/Resources';
 //changes to imports 
 // template for if we want to end up using any of the material ui icons vvv
@@ -87,6 +88,7 @@ function App() {
         <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
+        <Route exact path="/mypuzzles" element={<MyPuzzles/>} />
         <Route exact path="/resources" element={<Resources/>} />
         <Route path = "*" element={<Home/>} /> 
         </Routes>

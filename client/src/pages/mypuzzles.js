@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Typography } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
 import {
   createMuiTheme,
   ThemeProvider,
   makeStyles,
 } from "@material-ui/core/styles";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const theme = createMuiTheme({
   palette: {
@@ -52,42 +50,20 @@ const styles = makeStyles({
   },
 });
 
-
-const Home = () => {
+const MyPuzzles = () => {
   const classes = styles();
-
-  const getLogin = () => {
-    fetch("http://localhost:5000/ok")
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
-    getLogin();
-  });
 
   return (
     <div>
       <ThemeProvider theme={theme}>
         <div className={classes.wrapper}>
           <Typography variant="h4" className={classes.bigSpace} color="primary">
-            At Chessmate, we believe that the best way to learn is to play.
+            Here you can choose puzzles to solve from our library.
           </Typography>
-          <iframe
-            src="https://lichess.org/tv/frame?theme=blue&bg=dark"
-            style={{
-              width: 400,
-              height: 444,
-              allowtransparency: "true",
-              frameborder: "0",
-            }}
-            title="LichessTV"
-          ></iframe>
         </div>
       </ThemeProvider>
     </div>
   );
 };
 
-export default Home;
+export default MyPuzzles;
