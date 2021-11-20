@@ -61,6 +61,22 @@ const MyPuzzles = () => {
             Here you can choose puzzles to solve from our library.
           </Typography>
           {/* Make som cards to display puzzle boards */}
+          <div className="card">
+            <img className="card-img-top" src="/client/src/pages/assets/images/fill-murray.jpg" />
+            <div className="card-body">
+              <Typography
+                variant="h5"
+                className={classes.bigSpace} 
+                className="card-title"
+                color="primary">
+                  Puzzle 1
+              </Typography>
+              <p className="card-text">
+                puzzle info
+              </p>
+              <a href="#" class="btn btn-primary">Add to deck</a>
+            </div>
+          </div>
         </div>
       </ThemeProvider>
     </div>
