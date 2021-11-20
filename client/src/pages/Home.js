@@ -74,9 +74,6 @@ const  Home = () => {
           <Typography variant="h4" className={classes.bigSpace} color="primary">
              At Chessmate, we believe that the best way to learn is to play.
           </Typography>
-        <div className={classes.littleSpace}>
-          <a href= "http://localhost:5000/auth/lichess">Login</a>
-        </div>
         <iframe src="https://lichess.org/tv/frame?theme=blue&bg=dark" style={{width: 400, height: 444, allowtransparency:"true", frameborder:"0"}} title="LichessTV"></iframe>
         </div>
         </ThemeProvider>
