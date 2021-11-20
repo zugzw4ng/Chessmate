@@ -60,6 +60,7 @@ const MyPuzzles = () => {
           <Typography variant="h4" className={classes.bigSpace} color="primary">
             Here you can choose puzzles to solve from our library.
           </Typography>
+          {/* Make som cards to display puzzle boards */}
         </div>
       </ThemeProvider>
     </div>
