@@ -46,6 +46,9 @@ function NavBar() {
     return (
             <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
                 {/* can place image url here for our logo for chessmate which will use svg formatting to fill according to mobile or web*/}
+              {/* if user is logged in show saved books and logout */}
+              {Auth.loggedIn() ? (
+                <>
                 <Typography variant="h6" className={classes.menuItem}>
                 <Link to="/">
                     Home
@@ -57,7 +60,6 @@ function NavBar() {
                     Puzzle of The Day
                 </Link>
                 </Typography>
-
                 <Typography variant="h6" className={classes.menuItem}>
                 <Link to="mypuzzles">    
                     My Puzzles 
@@ -69,9 +71,8 @@ function NavBar() {
                     Chess Resources
                 </Link>
                 </Typography>
-              {Auth.loggedIn() ? (
-                <>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                  
                 </>
               ) : (
                 <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
