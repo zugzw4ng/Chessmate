@@ -1,0 +1,134 @@
+[
+  {
+    "PuzzleId": "00008",
+    "FEN": "r6k/pp2r2p/4Rp1Q/3p4/8/1N1P2R1/PqP2bPP/7K b - - 0 24",
+    "Moves": "f2g3 e6e7 b2b1 b3c1 b1c1 h6c1",
+    "Rating": 1788,
+    "RatingDeviation": 76,
+    "Popularity": 92,
+    "NbPlays": 456,
+    "Themes": "crushing hangingPiece long middlegame",
+    "GameUrl": "https://lichess.org/787zsVup/black#48"
+  },
+  {
+    "PuzzleId": "0000D",
+    "FEN": "5rk1/1p3ppp/pq3b2/8/8/1P1Q1N2/P4PPP/3R2K1 w - - 2 27",
+    "Moves": "d3d6 f8d8 d6d8 f6d8",
+    "Rating": 1521,
+    "RatingDeviation": 73,
+    "Popularity": 96,
+    "NbPlays": 8483,
+    "Themes": "advantage endgame short",
+    "GameUrl": "https://lichess.org/F8M8OS71#53"
+  },
+  {
+    "PuzzleId": "0009B",
+    "FEN": "r2qr1k1/b1p2ppp/pp4n1/P1P1p3/4P1n1/B2P2Pb/3NBP1P/RN1QR1K1 b - - 1 16",
+    "Moves": "b6c5 e2g4 h3g4 d1g4",
+    "Rating": 1111,
+    "RatingDeviation": 75,
+    "Popularity": 85,
+    "NbPlays": 500,
+    "Themes": "advantage middlegame short",
+    "GameUrl": "https://lichess.org/4MWQCxQ6/black#32"
+  },
+  {
+    "PuzzleId": "000aY",
+    "FEN": "r4rk1/pp3ppp/2n1b3/q1pp2B1/8/P1Q2NP1/1PP1PP1P/2KR3R w - - 0 15",
+    "Moves": "g5e7 a5c3 b2c3 c6e7",
+    "Rating": 1365,
+    "RatingDeviation": 75,
+    "Popularity": 92,
+    "NbPlays": 378,
+    "Themes": "advantage master middlegame short",
+    "GameUrl": "https://lichess.org/iihZGl6t#29"
+  },
+  {
+    "PuzzleId": "000hf",
+    "FEN": "r1bqk2r/pp1nbNp1/2p1p2p/8/2BP4/1PN3P1/P3QP1P/3R1RK1 b kq - 0 19",
+    "Moves": "e8f7 e2e6 f7f8 e6f7",
+    "Rating": 1584,
+    "RatingDeviation": 74,
+    "Popularity": 88,
+    "NbPlays": 415,
+    "Themes": "mate mateIn2 middlegame short",
+    "GameUrl": "https://lichess.org/71ygsFeE/black#38"
+  },
+  {
+    "PuzzleId": "000rO",
+    "FEN": "3R4/8/K7/pB2b3/1p6/1P2k3/3p4/8 w - - 4 58",
+    "Moves": "a6a5 e5c7 a5b4 c7d8",
+    "Rating": 1039,
+    "RatingDeviation": 80,
+    "Popularity": 85,
+    "NbPlays": 53,
+    "Themes": "crushing endgame fork short",
+    "GameUrl": "https://lichess.org/tzeeBEc2#115"
+  },
+  {
+    "PuzzleId": "000tp",
+    "FEN": "4r3/5pk1/1p3np1/3p3p/2qQ4/P4N1P/1P3RP1/7K w - - 6 34",
+    "Moves": "d4b6 f6e4 h1g1 e4f2",
+    "Rating": 2038,
+    "RatingDeviation": 75,
+    "Popularity": 80,
+    "NbPlays": 104,
+    "Themes": "crushing endgame short trappedPiece",
+    "GameUrl": "https://lichess.org/GeXqsW90#67"
+  },
+  {
+    "PuzzleId": "00143",
+    "FEN": "r2q1rk1/5ppp/1np5/p1b5/2p1B3/P7/1P3PPP/R1BQ1RK1 b - - 1 17",
+    "Moves": "d8f6 d1h5 h7h6 h5c5",
+    "Rating": 1725,
+    "RatingDeviation": 74,
+    "Popularity": 90,
+    "NbPlays": 1290,
+    "Themes": "advantage middlegame short",
+    "GameUrl": "https://lichess.org/jcuxlI63/black#34"
+  },
+  {
+    "PuzzleId": "0018S",
+    "FEN": "2kr3r/pp3p2/4p2p/1N1p2p1/3Q4/1P1P4/2q2PPP/5RK1 b - - 1 20",
+    "Moves": "b7b6 d4a1 a7a5 f1c1",
+    "Rating": 2522,
+    "RatingDeviation": 100,
+    "Popularity": 91,
+    "NbPlays": 918,
+    "Themes": "advantage endgame pin short",
+    "GameUrl": "https://lichess.org/H1ARO2GL/black#40"
+  },
+  {
+    "PuzzleId": "001Wz",
+    "FEN": "4r1k1/5ppp/r1p5/p1n1RP2/8/2P2N1P/2P3P1/3R2K1 b - - 0 21",
+    "Moves": "e8e5 d1d8 e5e8 d8e8",
+    "Rating": 1128,
+    "RatingDeviation": 81,
+    "Popularity": 87,
+    "NbPlays": 53,
+    "Themes": "backRankMate endgame mate mateIn2 short",
+    "GameUrl": "https://lichess.org/84RH3LaP/black#42"
+  },
+  {
+    "PuzzleId": "001om",
+    "FEN": "5r1k/pp4pp/5p2/1BbQp1r1/6K1/7P/1PP3P1/3R3R w - - 2 26",
+    "Moves": "g4h4 c5f2 g2g3 f2g3",
+    "Rating": 1010,
+    "RatingDeviation": 79,
+    "Popularity": 89,
+    "NbPlays": 213,
+    "Themes": "mate mateIn2 middlegame short",
+    "GameUrl": "https://lichess.org/VWOIWtIh#51"
+  },
+  {
+    "PuzzleId": "001u3",
+    "FEN": "2r3k1/p1q2pp1/Q3p2p/b1Np4/2nP1P2/4P1P1/5K1P/2B1N3 b - - 3 33",
+    "Moves": "c7b6 a6c8 g8h7 c8b7",
+    "Rating": 2148,
+    "RatingDeviation": 82,
+    "Popularity": 53,
+    "NbPlays": 66,
+    "Themes": "advantage hangingPiece middlegame short",
+    "GameUrl": "https://lichess.org/BBn6ipaK/black#66"
+  }
+]
