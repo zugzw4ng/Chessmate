@@ -8,6 +8,7 @@ import NavBar from './components/NavBar'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
+import MyPuzzles from './pages/mypuzzles';
 import Resources from './pages/Resources';
 
 // particles
@@ -92,6 +93,7 @@ function App() {
         <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
+        <Route exact path="/mypuzzles" element={<MyPuzzles/>} />
         <Route exact path="/resources" element={<Resources/>} />
         <Route path = "*" element={<Home/>} /> 
         </Routes>
