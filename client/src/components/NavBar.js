@@ -1,43 +1,44 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import {Toolbar, Typography} from '@material-ui/core'
+import { Toolbar, Typography } from '@material-ui/core'
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
-import {makeStyles} from "@material-ui/core/styles"; 
+import { makeStyles } from "@material-ui/core/styles";
 import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm';
 
 import Auth from '../utils/auth';
 
 const styles = makeStyles({
-    bar:{
-        paddingTop: "1.15rem",
-        backgroundColor: "#fff",
-        '@media (max-width:780px)': { 
-           flexDirection: "column"
-          }
-    },
-    logo: {
-        width: "15%", 
-        '@media (max-width:780px)': { 
-           display: "none"
-           }
-    },
-    logoMobile:{
-        width: "100%", 
-        display: "none", 
-        '@media (max-width:780px)': { 
-            display: "inline-block"
-            }
-    },
-    menuItem: {
-        cursor: "pointer", 
-        flexGrow: 1,
-        "&:hover": {
-            color:  "#4f25c8"
-        },
-        '@media (max-width:780px)': { 
-            paddingBottom: "1rem"    }
+  bar: {
+    paddingTop: "1.15rem",
+    backgroundColor: "#fff",
+    '@media (max-width:780px)': {
+      flexDirection: "column"
     }
+  },
+  logo: {
+    width: "15%",
+    '@media (max-width:780px)': {
+      display: "none"
+    }
+  },
+  logoMobile: {
+    width: "100%",
+    display: "none",
+    '@media (max-width:780px)': {
+      display: "inline-block"
+    }
+  },
+  menuItem: {
+    cursor: "pointer",
+    flexGrow: 1,
+    "&:hover": {
+      color: "#4f25c8"
+    },
+    '@media (max-width:780px)': {
+      paddingBottom: "1rem"
+    }
+  }
 })
 
 function NavBar() {
@@ -108,9 +109,9 @@ function NavBar() {
           </Modal.Body>
         </Tab.Container>
       </Modal>
-            </Toolbar>
+    </Toolbar>
 
-    )
+  )
 }
 
 export default NavBar

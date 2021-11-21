@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
 import MyPuzzles from './pages/mypuzzles';
 import Resources from './pages/Resources';
+import Puzzleboard from './pages/Puzzleboard';
 //changes to imports 
 // template for if we want to end up using any of the material ui icons vvv
 // import TestIcon from '@material-ui/icons/Test';
@@ -87,6 +88,7 @@ function App() {
         <NavBar/>
         <Routes>
         <Route exact path="/" element={<Home/>} />
+        <Route exact path="/puzzleboard" element={<Puzzleboard/>}/>
         <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
         <Route exact path="/mypuzzles" element={<MyPuzzles/>} />
         <Route exact path="/resources" element={<Resources/>} />
