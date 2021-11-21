@@ -23,5 +23,6 @@
   "homepage": "https://github.com/zugzw4ng/Chessmate#readme",
   "devDependencies": {
     "concurrently": "^6.4.0"
-  }
+  },
+  "dependencies": {}
 }
