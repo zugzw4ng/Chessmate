@@ -24,5 +24,7 @@
   "devDependencies": {
     "concurrently": "^6.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-tsparticles": "^1.37.4"
+  }
 }

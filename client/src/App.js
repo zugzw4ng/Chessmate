@@ -18,6 +18,7 @@ import Puzzleboard from './pages/Puzzleboard';
 // particles
 import Particles from 'react-tsparticles';
 import particlesConfig from './config/configParticles';
+import PuzzleBoard from './pages/Puzzleboard';
 
 
 const theme = createTheme({
@@ -98,7 +99,6 @@ function App() {
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/puzzleboard" element={<Puzzleboard/>}/>
         <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
-        <Route exact path="/mypuzzles" element={<MyPuzzles/>} />
         <Route exact path="/resources" element={<Resources/>} />
         <Route path = "*" element={<Home/>} /> 
         </Routes>
