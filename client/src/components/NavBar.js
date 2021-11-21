@@ -51,23 +51,30 @@ function NavBar() {
                     Home
                 </Link>
                 </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
 
+                <Typography variant="h6" className={classes.menuItem}>
                 <Link to="puzzleoftheday">
                     Puzzle of The Day
                 </Link>
                 </Typography>
+
                 <Typography variant="h6" className={classes.menuItem}>
+<<<<<<< HEAD
                 <Link to="puzzleboard">
                     Puzzle Training
                 </Link>
+=======
+                <Link to="mypuzzles">    
+                    My Puzzles 
+                </Link>    
+>>>>>>> ef2e5e628018bcb24a6073e93b770c5fe237b086
                 </Typography>
+
                 <Typography variant="h6" className={classes.menuItem}>
                 <Link to="resources">
                     Chess Resources
                 </Link>
                 </Typography>
-              {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>

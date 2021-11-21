@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
+import MyPuzzles from './pages/mypuzzles';
 import Resources from './pages/Resources';
 import Puzzleboard from './pages/Puzzleboard';
 //changes to imports 
@@ -89,6 +90,7 @@ function App() {
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/puzzleboard" element={<Puzzleboard/>}/>
         <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
+        <Route exact path="/mypuzzles" element={<MyPuzzles/>} />
         <Route exact path="/resources" element={<Resources/>} />
         <Route path = "*" element={<Home/>} /> 
         </Routes>
