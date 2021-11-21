@@ -2011,9 +2011,4 @@ const Chess = function (fen) {
 
 /* Export Chess object if using node or any other CommonJS compatible
  * environment */
-if (typeof exports !== 'undefined') exports.Chess = Chess;
-/* Export Chess object for any RequireJS compatible environment */
-if (typeof define !== 'undefined')
-	define(function () {
-		return Chess;
-	});
+export default Chess
