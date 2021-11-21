@@ -58,6 +58,14 @@ function NavBar() {
           Puzzle of The Day
         </Link>
       </Typography>
+      
+      {Auth.loggedIn() ? (
+        <>
+          <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+        </>
+      ) : (
+        <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+      )}
 
       <Typography variant="h6" className={classes.menuItem}>
         <Link to="puzzleboard">
@@ -76,13 +84,7 @@ function NavBar() {
           Chess Resources
         </Link>
       </Typography>
-      {Auth.loggedIn() ? (
-        <>
-          <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
-        </>
-      ) : (
-        <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
-      )}
+      
       <Modal
         size='lg'
         show={showModal}
