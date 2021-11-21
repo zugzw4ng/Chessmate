@@ -11,7 +11,7 @@ import Auth from '../utils/auth';
 const styles = makeStyles({
   bar: {
     paddingTop: "1.15rem",
-    backgroundColor: "#fff",
+    backgroundColor: "#2b313c",
     '@media (max-width:780px)': {
       flexDirection: "column"
     }

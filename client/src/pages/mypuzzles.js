@@ -54,7 +54,7 @@ const MyPuzzles = () => {
   const classes = styles();
 
   return (
-    <div>
+    <div style={{ background: "#2b313c", height: "100vh" }}>
       <ThemeProvider theme={theme}>
         <div className={classes.wrapper}>
           <Typography variant="h4" className={classes.bigSpace} color="primary">
