@@ -1,12 +1,10 @@
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
-import Grid from './components/Grid'
-import Footer from './components/Footer'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
@@ -17,13 +15,19 @@ import Puzzleboard from './pages/Puzzleboard';
 // template for if we want to end up using any of the material ui icons vvv
 // import TestIcon from '@material-ui/icons/Test';
 
-const theme = createMuiTheme({
+// particles
+import Particles from 'react-tsparticles';
+import particlesConfig from './config/configParticles';
+
+
+const theme = createTheme({
   palette: {
+    type: 'dark',
     primary: {
-      main:"#2e1667",
+      main: '#3f51b5',
     },
     secondary: {
-      main:"#c7d8ed",
+      main: '#f50057',
     },
   },
   typography: {
@@ -78,12 +82,16 @@ const client = new ApolloClient({
 
 
 function App() {
+
   const classes = styles(); 
 
   return (
     <ApolloProvider client={client}>
     <Router>
-    <div className="App">
+    <div className="App" style={{ position: 'relative', overflow: "hidden" }}>
+    <div style={{ position: 'absolute'}}>
+      <Particles height="100vh" width="100vw" params={particlesConfig} />
+    </div>
       <ThemeProvider theme={theme}>
         <NavBar/>
         <Routes>
@@ -95,18 +103,9 @@ function App() {
         <Route path = "*" element={<Home/>} /> 
         </Routes>
         {/* demo of what we can use for icons if we want for the grid */}
-        {/* <div className={`${classes.grid} ${classes.bigSpace}`}>
-          <Grid icon={<SecurityIcon style={{fill: "#4360A6", height:"125", width:"125"}}/>}  title="Secure" btnTitle="Show me More" />
-          <Grid icon={<EventNoteIcon style={{fill: "#449A76", height:"125", width:"125"}}/>} title="Reliable" btnTitle="Show me More"/>
-          <Grid icon={<TrendingUpIcon style={{fill: "#D05B2D", height:"125", width:"125"}}/>}  title="Performant" btnTitle="Show me More"/>
-        </div>
-        <div className={`${classes.grid} ${classes.littleSpace}`}>  
-          <Grid icon={<ImportExportIcon style={{fill: "#5EA780", height:"125", width:"125"}}/>}  title="Modular" btnTitle="Show me More"/>
-          <Grid icon={<ComputerIcon style={{fill: "#E69426", height:"125", width:"125"}}/>}  title="Multi-Platform" btnTitle="Show me More"/>
-          <Grid icon={<HttpIcon style={{fill: "#2EA09D", height:"125", width:"125"}}/>} title="Connected" btnTitle="Show me More"/>
-        </div> */}
+        {/* can add more divs here */}
         <div className={classes.bigSpace}>
-          <Footer/>
+          
         </div>
       </ThemeProvider>
   </div>

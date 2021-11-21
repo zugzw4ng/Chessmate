@@ -8,7 +8,7 @@ const Resources = () => {
 
 
   return (
-    <div>
+    <div style={{ background: "#2b313c", height: "100vh" }}>
       <table>
         <tr>
           <th>Name</th>
