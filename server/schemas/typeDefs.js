@@ -21,7 +21,7 @@ const typeDefs = gql`
         RatingDeviation: Int
         Popularity: Int
         NbPlays: Int
-        Themes: String
+        Themes: [String]
         GameUrl: String
     }
 

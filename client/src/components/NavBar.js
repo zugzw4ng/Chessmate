@@ -1,79 +1,85 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import {Toolbar, Typography} from '@material-ui/core'
+import { Toolbar, Typography } from '@material-ui/core'
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
-import {makeStyles} from "@material-ui/core/styles"; 
+import { makeStyles } from "@material-ui/core/styles";
 import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm';
 
 import Auth from '../utils/auth';
 
 const styles = makeStyles({
-    bar:{
-        paddingTop: "1.15rem",
-        backgroundColor: "#fff",
-        '@media (max-width:780px)': { 
-           flexDirection: "column"
-          }
-    },
-    logo: {
-        width: "15%", 
-        '@media (max-width:780px)': { 
-           display: "none"
-           }
-    },
-    logoMobile:{
-        width: "100%", 
-        display: "none", 
-        '@media (max-width:780px)': { 
-            display: "inline-block"
-            }
-    },
-    menuItem: {
-        cursor: "pointer", 
-        flexGrow: 1,
-        "&:hover": {
-            color:  "#4f25c8"
-        },
-        '@media (max-width:780px)': { 
-            paddingBottom: "1rem"    }
+  bar: {
+    paddingTop: "1.15rem",
+    backgroundColor: "#fff",
+    '@media (max-width:780px)': {
+      flexDirection: "column"
     }
+  },
+  logo: {
+    width: "15%",
+    '@media (max-width:780px)': {
+      display: "none"
+    }
+  },
+  logoMobile: {
+    width: "100%",
+    display: "none",
+    '@media (max-width:780px)': {
+      display: "inline-block"
+    }
+  },
+  menuItem: {
+    cursor: "pointer",
+    flexGrow: 1,
+    "&:hover": {
+      color: "#4f25c8"
+    },
+    '@media (max-width:780px)': {
+      paddingBottom: "1rem"
+    }
+  }
 })
 
 function NavBar() {
-    const classes = styles()
-    const [showModal, setShowModal] = useState(false);
-    return (
-            <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
-                {/* can place image url here for our logo for chessmate which will use svg formatting to fill according to mobile or web*/}
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link to="/">
-                    Home
-                </Link>
-                </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
+  const classes = styles()
+  const [showModal, setShowModal] = useState(false);
+  return (
+    <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>
+      {/* can place image url here for our logo for chessmate which will use svg formatting to fill according to mobile or web*/}
+      <Typography variant="h6" className={classes.menuItem}>
+        <Link to="/">
+          Home
+        </Link>
+      </Typography>
 
-                <Link to="puzzleoftheday">
-                    Puzzle of The Day
-                </Link>
-                </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                    Matches 
-                </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link to="resources">
-                    Chess Resources
-                </Link>
-                </Typography>
-              {/* if user is logged in show saved books and logout */}
-              {Auth.loggedIn() ? (
-                <>
-                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
-                </>
-              ) : (
-                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
-              )}
-                <Modal
+      <Typography variant="h6" className={classes.menuItem}>
+        <Link to="puzzleoftheday">
+          Puzzle of The Day
+        </Link>
+      </Typography>
+      
+      {Auth.loggedIn() ? (
+        <>
+          <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+        </>
+      ) : (
+        <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+      )}
+
+      <Typography variant="h6" className={classes.menuItem}>
+        <Link to="puzzleboard">
+          Puzzle Training
+        </Link>
+      </Typography>
+
+      <Typography variant="h6" className={classes.menuItem}>
+        <Link to="resources">
+          Chess Resources
+        </Link>
+      </Typography>
+      
+      <Modal
         size='lg'
         show={showModal}
         onHide={() => setShowModal(false)}
@@ -104,9 +110,9 @@ function NavBar() {
           </Modal.Body>
         </Tab.Container>
       </Modal>
-            </Toolbar>
+    </Toolbar>
 
-    )
+  )
 }
 
 export default NavBar

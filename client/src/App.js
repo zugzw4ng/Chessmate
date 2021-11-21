@@ -8,7 +8,15 @@ import NavBar from './components/NavBar'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
+import MyPuzzles from './pages/mypuzzles';
 import Resources from './pages/Resources';
+<<<<<<< HEAD
+=======
+import Puzzleboard from './pages/Puzzleboard';
+//changes to imports 
+// template for if we want to end up using any of the material ui icons vvv
+// import TestIcon from '@material-ui/icons/Test';
+>>>>>>> 365dd231bdc653a61556017cff6b82d8012c0388
 
 // particles
 import Particles from 'react-tsparticles';
@@ -91,7 +99,9 @@ function App() {
         <NavBar/>
         <Routes>
         <Route exact path="/" element={<Home/>} />
+        <Route exact path="/puzzleboard" element={<Puzzleboard/>}/>
         <Route exact path="/puzzleoftheday" element={<PuzzleDay/>} />
+        <Route exact path="/mypuzzles" element={<MyPuzzles/>} />
         <Route exact path="/resources" element={<Resources/>} />
         <Route path = "*" element={<Home/>} /> 
         </Routes>
