@@ -63,6 +63,9 @@ function NavBar() {
         <Link to="puzzleboard">
           Puzzle Training
         </Link>
+      </Typography>
+
+      <Typography>
         <Link to="mypuzzles">
           My Puzzles
         </Link>
