@@ -75,6 +75,45 @@ function NavBar() {
       
       <Modal
         size="lg"
+ 
+    const classes = styles()
+    const [showModal, setShowModal] = useState(false);
+    return (
+            <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
+                {/* can place image url here for our logo for chessmate which will use svg formatting to fill according to mobile or web*/}
+              {/* if user is logged in show saved books and logout */}
+              {Auth.loggedIn() ? (
+                <>
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link to="/">
+                    Home
+                </Link>
+                </Typography>
+
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link to="puzzleoftheday">
+                    Puzzle of The Day
+                </Link>
+                </Typography>
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link to="mypuzzles">    
+                    My Puzzles 
+                </Link>    
+                </Typography>
+
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link to="resources">
+                    Chess Resources
+                </Link>
+                </Typography>
+                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                  
+                </>
+              ) : (
+                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+              )}
+                <Modal
+        size='lg'
         show={showModal}
         onHide={() => setShowModal(false)}
         aria-labelledby="signup-modal"
