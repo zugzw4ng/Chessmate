@@ -51,21 +51,24 @@ function NavBar() {
                     Home
                 </Link>
                 </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
 
+                <Typography variant="h6" className={classes.menuItem}>
                 <Link to="puzzleoftheday">
                     Puzzle of The Day
                 </Link>
                 </Typography>
+
                 <Typography variant="h6" className={classes.menuItem}>
-                    Matches 
+                <Link to="mypuzzles">    
+                    My Puzzles 
+                </Link>    
                 </Typography>
+
                 <Typography variant="h6" className={classes.menuItem}>
                 <Link to="resources">
                     Chess Resources
                 </Link>
                 </Typography>
-              {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
