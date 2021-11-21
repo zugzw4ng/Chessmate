@@ -3,16 +3,16 @@ import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import {
-  createMuiTheme,
+  createTheme,
   ThemeProvider,
   makeStyles,
 } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
-      main: "#2e1667",
+      main: "#ffffff",
     },
     secondary: {
       main: "#c7d8ed",
@@ -23,7 +23,7 @@ const theme = createMuiTheme({
     h4: {
       fontWeight: 600,
       fontSize: 28,
-      lineHeight: "2rem",
+      lineHeight: "2.5rem",
     },
     h5: {
       fontWeight: 100,
@@ -39,7 +39,7 @@ const styles = makeStyles({
     textAlign: "center",
   },
   bigSpace: {
-    marginTop: "5rem",
+    marginTop: "0rem",
   },
   littleSpace: {
     marginTop: "2.5rem",
@@ -68,7 +68,7 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <div style={{ background: "#2b313c", height: "100vh" }}>
       <ThemeProvider theme={theme}>
         <div className={classes.wrapper}>
           <Typography variant="h4" className={classes.bigSpace} color="primary">

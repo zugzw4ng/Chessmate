@@ -5,7 +5,7 @@ const  PuzzleDay = () => {
 
 
     return (
-      <div>
+      <div style={{ background: "#2b313c", height: "100vh" }}>
       <div className="test">
       </div>
       <div>
