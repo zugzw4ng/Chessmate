@@ -8,7 +8,6 @@ import NavBar from './components/NavBar'
 import './App.css';
 import Home from './pages/Home';
 import PuzzleDay from './pages/puzzleoftheDay';
-import MyPuzzles from './pages/mypuzzles';
 import Resources from './pages/Resources';
 import Puzzleboard from './pages/Puzzleboard';
 //changes to imports 
