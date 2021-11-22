@@ -2,6 +2,7 @@ import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { createTheme } from '@material-ui/core/styles';
 import { ApolloProvider } from '@apollo/react-hooks';
+import React from 'react'
 import ApolloClient from 'apollo-boost';
 import NavBar from './components/NavBar'
 // eslint-disable-next-line no-unused-vars
